@@ -1,0 +1,4 @@
+Run options:
+  include {:uae=>true}
+  exclude {:skip_uae=>true}
+spec/features/desktop/insurance/car/API_Integration_Project/NoorTakaful/desktop_ClaimCase_spec.rb:165.54888699999992

@@ -1,0 +1,13 @@
+1 processes for 1 specs, ~ 1 specs per process
+Run options:
+  include {:uae=>true}
+  exclude {:skip_uae=>true}
+.
+
+Finished in 2 minutes 45.5 seconds (files took 0.92994 seconds to load)
+1 example, 0 failures
+
+
+1 example, 0 failures
+
+Took 166 seconds (2:46)

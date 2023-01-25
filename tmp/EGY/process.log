@@ -1,0 +1,740 @@
+2 processes for 3 specs, ~ 1 specs per process
+Run options:
+  include {:egy=>true}
+  exclude {:skip_egy=>true}
+
+
+Finished in 0.01014 seconds (files took 1.17 seconds to load)
+0 examples, 0 failures
+
+Run options:
+  include {:egy=>true}
+  exclude {:skip_egy=>true}
+FFF
+
+Failures:
+
+  1) Home Insurance Get Quote Test Suite Verify user can get home insurance with registered email address
+     Got 0 failures and 4 other errors:
+
+     1.1) Failure/Error: @app.desktop_home_landing.load country: "#{ENV['COUNTRY'].downcase}", language: "#{ENV['LANG'].downcase}"
+
+          Selenium::WebDriver::Error::NoSuchWindowError:
+            no such window: target window already closed
+            from unknown error: web view not found
+              (Session info: chrome=89.0.4389.90)
+          # 0   chromedriver                        0x0000000105fa1909 chromedriver + 2533641
+          # 1   chromedriver                        0x000000010662bd53 chromedriver + 9391443
+          # 2   chromedriver                        0x0000000105d5f3c3 chromedriver + 164803
+          # 3   chromedriver                        0x0000000105d4411f chromedriver + 53535
+          # 4   chromedriver                        0x0000000105dad489 chromedriver + 484489
+          # 5   chromedriver                        0x0000000105db96a2 chromedriver + 534178
+          # 6   chromedriver                        0x0000000105dab043 chromedriver + 475203
+          # 7   chromedriver                        0x0000000105d85616 chromedriver + 321046
+          # 8   chromedriver                        0x0000000105d86587 chromedriver + 324999
+          # 9   chromedriver                        0x0000000105f707f9 chromedriver + 2332665
+          # 10  chromedriver                        0x0000000105f7d963 chromedriver + 2386275
+          # 11  chromedriver                        0x0000000105f7d45b chromedriver + 2384987
+          # 12  chromedriver                        0x0000000105f575b5 chromedriver + 2229685
+          # 13  chromedriver                        0x0000000105f7e3bf chromedriver + 2388927
+          # 14  chromedriver                        0x0000000105f65c79 chromedriver + 2288761
+          # 15  chromedriver                        0x0000000105f94f69 chromedriver + 2482025
+          # 16  chromedriver                        0x0000000105fa7103 chromedriver + 2556163
+          # 17  libsystem_pthread.dylib             0x00007fff58b622eb _pthread_body + 126
+          # 18  libsystem_pthread.dylib             0x00007fff58b65249 _pthread_start + 66
+          # 19  libsystem_pthread.dylib             0x00007fff58b6140d thread_start + 13
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:72:in `assert_ok'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:34:in `initialize'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `new'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `create_response'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/default.rb:114:in `request'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:64:in `call'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/bridge.rb:167:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:567:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:59:in `get'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/navigation.rb:32:in `to'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/selenium/driver.rb:68:in `visit'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:276:in `visit'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/dsl.rb:51:in `block (2 levels) in <module:DSL>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/site_prism-3.5/lib/site_prism/page.rb:165:in `load_html_website'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/site_prism-3.5/lib/site_prism/page.rb:52:in `load'
+          # ./spec/features/desktop/insurance/home/desktop_get_quote_spec.rb:6:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/spec_helper.rb:127:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/support/retry_allure_helper.rb:27:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:37:in `block (2 levels) in setup'
+
+     1.2) Failure/Error: file_name = page.save_screenshot
+
+          Selenium::WebDriver::Error::NoSuchWindowError:
+            no such window: target window already closed
+            from unknown error: web view not found
+              (Session info: chrome=89.0.4389.90)
+          # 0   chromedriver                        0x0000000105fa1909 chromedriver + 2533641
+          # 1   chromedriver                        0x000000010662bd53 chromedriver + 9391443
+          # 2   chromedriver                        0x0000000105d5f3c3 chromedriver + 164803
+          # 3   chromedriver                        0x0000000105d4411f chromedriver + 53535
+          # 4   chromedriver                        0x0000000105dad489 chromedriver + 484489
+          # 5   chromedriver                        0x0000000105db96a2 chromedriver + 534178
+          # 6   chromedriver                        0x0000000105dab043 chromedriver + 475203
+          # 7   chromedriver                        0x0000000105d85616 chromedriver + 321046
+          # 8   chromedriver                        0x0000000105d86587 chromedriver + 324999
+          # 9   chromedriver                        0x0000000105f707f9 chromedriver + 2332665
+          # 10  chromedriver                        0x0000000105f7d963 chromedriver + 2386275
+          # 11  chromedriver                        0x0000000105f7d45b chromedriver + 2384987
+          # 12  chromedriver                        0x0000000105f575b5 chromedriver + 2229685
+          # 13  chromedriver                        0x0000000105f7e3bf chromedriver + 2388927
+          # 14  chromedriver                        0x0000000105f65c79 chromedriver + 2288761
+          # 15  chromedriver                        0x0000000105f94f69 chromedriver + 2482025
+          # 16  chromedriver                        0x0000000105fa7103 chromedriver + 2556163
+          # 17  libsystem_pthread.dylib             0x00007fff58b622eb _pthread_body + 126
+          # 18  libsystem_pthread.dylib             0x00007fff58b65249 _pthread_start + 66
+          # 19  libsystem_pthread.dylib             0x00007fff58b6140d thread_start + 13
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:72:in `assert_ok'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:34:in `initialize'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `new'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `create_response'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/default.rb:114:in `request'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:64:in `call'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/bridge.rb:167:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:567:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:229:in `screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:56:in `screenshot_as'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:40:in `block in save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:40:in `open'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:40:in `save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/selenium/driver.rb:114:in `save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:724:in `block in save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:724:in `tap'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:724:in `save_screenshot'
+          # ./spec/spec_helper.rb:116:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/spec_helper.rb:127:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/support/retry_allure_helper.rb:27:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:37:in `block (2 levels) in setup'
+
+     1.3) Failure/Error: file_name = page.save_screenshot
+
+          Selenium::WebDriver::Error::NoSuchWindowError:
+            no such window: target window already closed
+            from unknown error: web view not found
+              (Session info: chrome=89.0.4389.90)
+          # 0   chromedriver                        0x0000000105fa1909 chromedriver + 2533641
+          # 1   chromedriver                        0x000000010662bd53 chromedriver + 9391443
+          # 2   chromedriver                        0x0000000105d5f3c3 chromedriver + 164803
+          # 3   chromedriver                        0x0000000105d4411f chromedriver + 53535
+          # 4   chromedriver                        0x0000000105dad489 chromedriver + 484489
+          # 5   chromedriver                        0x0000000105db96a2 chromedriver + 534178
+          # 6   chromedriver                        0x0000000105dab043 chromedriver + 475203
+          # 7   chromedriver                        0x0000000105d85616 chromedriver + 321046
+          # 8   chromedriver                        0x0000000105d86587 chromedriver + 324999
+          # 9   chromedriver                        0x0000000105f707f9 chromedriver + 2332665
+          # 10  chromedriver                        0x0000000105f7d963 chromedriver + 2386275
+          # 11  chromedriver                        0x0000000105f7d45b chromedriver + 2384987
+          # 12  chromedriver                        0x0000000105f575b5 chromedriver + 2229685
+          # 13  chromedriver                        0x0000000105f7e3bf chromedriver + 2388927
+          # 14  chromedriver                        0x0000000105f65c79 chromedriver + 2288761
+          # 15  chromedriver                        0x0000000105f94f69 chromedriver + 2482025
+          # 16  chromedriver                        0x0000000105fa7103 chromedriver + 2556163
+          # 17  libsystem_pthread.dylib             0x00007fff58b622eb _pthread_body + 126
+          # 18  libsystem_pthread.dylib             0x00007fff58b65249 _pthread_start + 66
+          # 19  libsystem_pthread.dylib             0x00007fff58b6140d thread_start + 13
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:72:in `assert_ok'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:34:in `initialize'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `new'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `create_response'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/default.rb:114:in `request'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:64:in `call'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/bridge.rb:167:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:567:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:229:in `screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:56:in `screenshot_as'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:40:in `block in save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:40:in `open'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:40:in `save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/selenium/driver.rb:114:in `save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:724:in `block in save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:724:in `tap'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:724:in `save_screenshot'
+          # ./spec/support/retry_allure_helper.rb:34:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/spec_helper.rb:127:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/support/retry_allure_helper.rb:27:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:37:in `block (2 levels) in setup'
+
+     1.4) Failure/Error: ex.run_with_retry retry: (ENV['RETRY_COUNT'] || 1).to_i # 2 means actually 1 retry
+
+          Selenium::WebDriver::Error::InvalidArgumentError:
+            invalid argument: 'handle' must be a string
+              (Session info: chrome=89.0.4389.90)
+          # 0   chromedriver                        0x0000000105fa1909 chromedriver + 2533641
+          # 1   chromedriver                        0x000000010662bd53 chromedriver + 9391443
+          # 2   chromedriver                        0x0000000105d5f3c3 chromedriver + 164803
+          # 3   chromedriver                        0x0000000105db1a7a chromedriver + 502394
+          # 4   chromedriver                        0x0000000105daacd8 chromedriver + 474328
+          # 5   chromedriver                        0x0000000105d85616 chromedriver + 321046
+          # 6   chromedriver                        0x0000000105d86587 chromedriver + 324999
+          # 7   chromedriver                        0x0000000105f707f9 chromedriver + 2332665
+          # 8   chromedriver                        0x0000000105f7d963 chromedriver + 2386275
+          # 9   chromedriver                        0x0000000105f7d45b chromedriver + 2384987
+          # 10  chromedriver                        0x0000000105f575b5 chromedriver + 2229685
+          # 11  chromedriver                        0x0000000105f7e3bf chromedriver + 2388927
+          # 12  chromedriver                        0x0000000105f65c79 chromedriver + 2288761
+          # 13  chromedriver                        0x0000000105f94f69 chromedriver + 2482025
+          # 14  chromedriver                        0x0000000105fa7103 chromedriver + 2556163
+          # 15  libsystem_pthread.dylib             0x00007fff58b622eb _pthread_body + 126
+          # 16  libsystem_pthread.dylib             0x00007fff58b65249 _pthread_start + 66
+          # 17  libsystem_pthread.dylib             0x00007fff58b6140d thread_start + 13
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:72:in `assert_ok'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:34:in `initialize'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `new'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `create_response'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/default.rb:114:in `request'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:64:in `call'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/bridge.rb:167:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:567:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:136:in `switch_to_window'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/target_locator.rb:80:in `window'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/selenium/driver.rb:217:in `switch_to_window'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/selenium/driver_specializations/chrome_driver.rb:42:in `reset!'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:128:in `reset!'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara.rb:322:in `block in reset_sessions!'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara.rb:322:in `reverse_each'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara.rb:322:in `reset_sessions!'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/rspec.rb:18:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/spec_helper.rb:127:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/support/retry_allure_helper.rb:27:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:37:in `block (2 levels) in setup'
+
+  2) Home Insurance Get Quote Test Suite Verify user can get home insurance with non-registered email address
+     Got 0 failures and 4 other errors:
+
+     2.1) Failure/Error: @app.desktop_home_landing.load country: "#{ENV['COUNTRY'].downcase}", language: "#{ENV['LANG'].downcase}"
+
+          Selenium::WebDriver::Error::NoSuchWindowError:
+            no such window: target window already closed
+            from unknown error: web view not found
+              (Session info: chrome=89.0.4389.90)
+          # 0   chromedriver                        0x0000000105fa1909 chromedriver + 2533641
+          # 1   chromedriver                        0x000000010662bd53 chromedriver + 9391443
+          # 2   chromedriver                        0x0000000105d5f3c3 chromedriver + 164803
+          # 3   chromedriver                        0x0000000105d4411f chromedriver + 53535
+          # 4   chromedriver                        0x0000000105dad489 chromedriver + 484489
+          # 5   chromedriver                        0x0000000105db96a2 chromedriver + 534178
+          # 6   chromedriver                        0x0000000105dab043 chromedriver + 475203
+          # 7   chromedriver                        0x0000000105d85616 chromedriver + 321046
+          # 8   chromedriver                        0x0000000105d86587 chromedriver + 324999
+          # 9   chromedriver                        0x0000000105f707f9 chromedriver + 2332665
+          # 10  chromedriver                        0x0000000105f7d963 chromedriver + 2386275
+          # 11  chromedriver                        0x0000000105f7d45b chromedriver + 2384987
+          # 12  chromedriver                        0x0000000105f575b5 chromedriver + 2229685
+          # 13  chromedriver                        0x0000000105f7e3bf chromedriver + 2388927
+          # 14  chromedriver                        0x0000000105f65c79 chromedriver + 2288761
+          # 15  chromedriver                        0x0000000105f94f69 chromedriver + 2482025
+          # 16  chromedriver                        0x0000000105fa7103 chromedriver + 2556163
+          # 17  libsystem_pthread.dylib             0x00007fff58b622eb _pthread_body + 126
+          # 18  libsystem_pthread.dylib             0x00007fff58b65249 _pthread_start + 66
+          # 19  libsystem_pthread.dylib             0x00007fff58b6140d thread_start + 13
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:72:in `assert_ok'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:34:in `initialize'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `new'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `create_response'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/default.rb:114:in `request'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:64:in `call'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/bridge.rb:167:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:567:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:59:in `get'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/navigation.rb:32:in `to'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/selenium/driver.rb:68:in `visit'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:276:in `visit'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/dsl.rb:51:in `block (2 levels) in <module:DSL>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/site_prism-3.5/lib/site_prism/page.rb:165:in `load_html_website'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/site_prism-3.5/lib/site_prism/page.rb:52:in `load'
+          # ./spec/features/desktop/insurance/home/desktop_get_quote_spec.rb:6:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/spec_helper.rb:127:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/support/retry_allure_helper.rb:27:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:37:in `block (2 levels) in setup'
+
+     2.2) Failure/Error: file_name = page.save_screenshot
+
+          Selenium::WebDriver::Error::NoSuchWindowError:
+            no such window: target window already closed
+            from unknown error: web view not found
+              (Session info: chrome=89.0.4389.90)
+          # 0   chromedriver                        0x0000000105fa1909 chromedriver + 2533641
+          # 1   chromedriver                        0x000000010662bd53 chromedriver + 9391443
+          # 2   chromedriver                        0x0000000105d5f3c3 chromedriver + 164803
+          # 3   chromedriver                        0x0000000105d4411f chromedriver + 53535
+          # 4   chromedriver                        0x0000000105dad489 chromedriver + 484489
+          # 5   chromedriver                        0x0000000105db96a2 chromedriver + 534178
+          # 6   chromedriver                        0x0000000105dab043 chromedriver + 475203
+          # 7   chromedriver                        0x0000000105d85616 chromedriver + 321046
+          # 8   chromedriver                        0x0000000105d86587 chromedriver + 324999
+          # 9   chromedriver                        0x0000000105f707f9 chromedriver + 2332665
+          # 10  chromedriver                        0x0000000105f7d963 chromedriver + 2386275
+          # 11  chromedriver                        0x0000000105f7d45b chromedriver + 2384987
+          # 12  chromedriver                        0x0000000105f575b5 chromedriver + 2229685
+          # 13  chromedriver                        0x0000000105f7e3bf chromedriver + 2388927
+          # 14  chromedriver                        0x0000000105f65c79 chromedriver + 2288761
+          # 15  chromedriver                        0x0000000105f94f69 chromedriver + 2482025
+          # 16  chromedriver                        0x0000000105fa7103 chromedriver + 2556163
+          # 17  libsystem_pthread.dylib             0x00007fff58b622eb _pthread_body + 126
+          # 18  libsystem_pthread.dylib             0x00007fff58b65249 _pthread_start + 66
+          # 19  libsystem_pthread.dylib             0x00007fff58b6140d thread_start + 13
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:72:in `assert_ok'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:34:in `initialize'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `new'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `create_response'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/default.rb:114:in `request'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:64:in `call'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/bridge.rb:167:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:567:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:229:in `screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:56:in `screenshot_as'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:40:in `block in save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:40:in `open'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:40:in `save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/selenium/driver.rb:114:in `save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:724:in `block in save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:724:in `tap'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:724:in `save_screenshot'
+          # ./spec/spec_helper.rb:116:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/spec_helper.rb:127:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/support/retry_allure_helper.rb:27:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:37:in `block (2 levels) in setup'
+
+     2.3) Failure/Error: file_name = page.save_screenshot
+
+          Selenium::WebDriver::Error::NoSuchWindowError:
+            no such window: target window already closed
+            from unknown error: web view not found
+              (Session info: chrome=89.0.4389.90)
+          # 0   chromedriver                        0x0000000105fa1909 chromedriver + 2533641
+          # 1   chromedriver                        0x000000010662bd53 chromedriver + 9391443
+          # 2   chromedriver                        0x0000000105d5f3c3 chromedriver + 164803
+          # 3   chromedriver                        0x0000000105d4411f chromedriver + 53535
+          # 4   chromedriver                        0x0000000105dad489 chromedriver + 484489
+          # 5   chromedriver                        0x0000000105db96a2 chromedriver + 534178
+          # 6   chromedriver                        0x0000000105dab043 chromedriver + 475203
+          # 7   chromedriver                        0x0000000105d85616 chromedriver + 321046
+          # 8   chromedriver                        0x0000000105d86587 chromedriver + 324999
+          # 9   chromedriver                        0x0000000105f707f9 chromedriver + 2332665
+          # 10  chromedriver                        0x0000000105f7d963 chromedriver + 2386275
+          # 11  chromedriver                        0x0000000105f7d45b chromedriver + 2384987
+          # 12  chromedriver                        0x0000000105f575b5 chromedriver + 2229685
+          # 13  chromedriver                        0x0000000105f7e3bf chromedriver + 2388927
+          # 14  chromedriver                        0x0000000105f65c79 chromedriver + 2288761
+          # 15  chromedriver                        0x0000000105f94f69 chromedriver + 2482025
+          # 16  chromedriver                        0x0000000105fa7103 chromedriver + 2556163
+          # 17  libsystem_pthread.dylib             0x00007fff58b622eb _pthread_body + 126
+          # 18  libsystem_pthread.dylib             0x00007fff58b65249 _pthread_start + 66
+          # 19  libsystem_pthread.dylib             0x00007fff58b6140d thread_start + 13
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:72:in `assert_ok'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:34:in `initialize'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `new'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `create_response'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/default.rb:114:in `request'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:64:in `call'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/bridge.rb:167:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:567:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:229:in `screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:56:in `screenshot_as'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:40:in `block in save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:40:in `open'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:40:in `save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/selenium/driver.rb:114:in `save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:724:in `block in save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:724:in `tap'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:724:in `save_screenshot'
+          # ./spec/support/retry_allure_helper.rb:34:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/spec_helper.rb:127:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/support/retry_allure_helper.rb:27:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:37:in `block (2 levels) in setup'
+
+     2.4) Failure/Error: ex.run_with_retry retry: (ENV['RETRY_COUNT'] || 1).to_i # 2 means actually 1 retry
+
+          Selenium::WebDriver::Error::InvalidArgumentError:
+            invalid argument: 'handle' must be a string
+              (Session info: chrome=89.0.4389.90)
+          # 0   chromedriver                        0x0000000105fa1909 chromedriver + 2533641
+          # 1   chromedriver                        0x000000010662bd53 chromedriver + 9391443
+          # 2   chromedriver                        0x0000000105d5f3c3 chromedriver + 164803
+          # 3   chromedriver                        0x0000000105db1a7a chromedriver + 502394
+          # 4   chromedriver                        0x0000000105daacd8 chromedriver + 474328
+          # 5   chromedriver                        0x0000000105d85616 chromedriver + 321046
+          # 6   chromedriver                        0x0000000105d86587 chromedriver + 324999
+          # 7   chromedriver                        0x0000000105f707f9 chromedriver + 2332665
+          # 8   chromedriver                        0x0000000105f7d963 chromedriver + 2386275
+          # 9   chromedriver                        0x0000000105f7d45b chromedriver + 2384987
+          # 10  chromedriver                        0x0000000105f575b5 chromedriver + 2229685
+          # 11  chromedriver                        0x0000000105f7e3bf chromedriver + 2388927
+          # 12  chromedriver                        0x0000000105f65c79 chromedriver + 2288761
+          # 13  chromedriver                        0x0000000105f94f69 chromedriver + 2482025
+          # 14  chromedriver                        0x0000000105fa7103 chromedriver + 2556163
+          # 15  libsystem_pthread.dylib             0x00007fff58b622eb _pthread_body + 126
+          # 16  libsystem_pthread.dylib             0x00007fff58b65249 _pthread_start + 66
+          # 17  libsystem_pthread.dylib             0x00007fff58b6140d thread_start + 13
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:72:in `assert_ok'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:34:in `initialize'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `new'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `create_response'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/default.rb:114:in `request'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:64:in `call'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/bridge.rb:167:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:567:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:136:in `switch_to_window'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/target_locator.rb:80:in `window'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/selenium/driver.rb:217:in `switch_to_window'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/selenium/driver_specializations/chrome_driver.rb:42:in `reset!'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:128:in `reset!'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara.rb:322:in `block in reset_sessions!'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara.rb:322:in `reverse_each'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara.rb:322:in `reset_sessions!'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/rspec.rb:18:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/spec_helper.rb:127:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/support/retry_allure_helper.rb:27:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:37:in `block (2 levels) in setup'
+
+  3) Home Insurance Get Quote Test Suite Verify home insurance breadcrumbs are working as expected
+     Got 0 failures and 4 other errors:
+
+     3.1) Failure/Error: @app.desktop_home_landing.load country: "#{ENV['COUNTRY'].downcase}", language: "#{ENV['LANG'].downcase}"
+
+          Selenium::WebDriver::Error::NoSuchWindowError:
+            no such window: target window already closed
+            from unknown error: web view not found
+              (Session info: chrome=89.0.4389.90)
+          # 0   chromedriver                        0x0000000105fa1909 chromedriver + 2533641
+          # 1   chromedriver                        0x000000010662bd53 chromedriver + 9391443
+          # 2   chromedriver                        0x0000000105d5f3c3 chromedriver + 164803
+          # 3   chromedriver                        0x0000000105d4411f chromedriver + 53535
+          # 4   chromedriver                        0x0000000105dad489 chromedriver + 484489
+          # 5   chromedriver                        0x0000000105db96a2 chromedriver + 534178
+          # 6   chromedriver                        0x0000000105dab043 chromedriver + 475203
+          # 7   chromedriver                        0x0000000105d85616 chromedriver + 321046
+          # 8   chromedriver                        0x0000000105d86587 chromedriver + 324999
+          # 9   chromedriver                        0x0000000105f707f9 chromedriver + 2332665
+          # 10  chromedriver                        0x0000000105f7d963 chromedriver + 2386275
+          # 11  chromedriver                        0x0000000105f7d45b chromedriver + 2384987
+          # 12  chromedriver                        0x0000000105f575b5 chromedriver + 2229685
+          # 13  chromedriver                        0x0000000105f7e3bf chromedriver + 2388927
+          # 14  chromedriver                        0x0000000105f65c79 chromedriver + 2288761
+          # 15  chromedriver                        0x0000000105f94f69 chromedriver + 2482025
+          # 16  chromedriver                        0x0000000105fa7103 chromedriver + 2556163
+          # 17  libsystem_pthread.dylib             0x00007fff58b622eb _pthread_body + 126
+          # 18  libsystem_pthread.dylib             0x00007fff58b65249 _pthread_start + 66
+          # 19  libsystem_pthread.dylib             0x00007fff58b6140d thread_start + 13
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:72:in `assert_ok'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:34:in `initialize'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `new'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `create_response'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/default.rb:114:in `request'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:64:in `call'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/bridge.rb:167:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:567:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:59:in `get'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/navigation.rb:32:in `to'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/selenium/driver.rb:68:in `visit'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:276:in `visit'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/dsl.rb:51:in `block (2 levels) in <module:DSL>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/site_prism-3.5/lib/site_prism/page.rb:165:in `load_html_website'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/site_prism-3.5/lib/site_prism/page.rb:52:in `load'
+          # ./spec/features/desktop/insurance/home/desktop_get_quote_spec.rb:6:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/spec_helper.rb:127:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/support/retry_allure_helper.rb:27:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:37:in `block (2 levels) in setup'
+
+     3.2) Failure/Error: file_name = page.save_screenshot
+
+          Selenium::WebDriver::Error::NoSuchWindowError:
+            no such window: target window already closed
+            from unknown error: web view not found
+              (Session info: chrome=89.0.4389.90)
+          # 0   chromedriver                        0x0000000105fa1909 chromedriver + 2533641
+          # 1   chromedriver                        0x000000010662bd53 chromedriver + 9391443
+          # 2   chromedriver                        0x0000000105d5f3c3 chromedriver + 164803
+          # 3   chromedriver                        0x0000000105d4411f chromedriver + 53535
+          # 4   chromedriver                        0x0000000105dad489 chromedriver + 484489
+          # 5   chromedriver                        0x0000000105db96a2 chromedriver + 534178
+          # 6   chromedriver                        0x0000000105dab043 chromedriver + 475203
+          # 7   chromedriver                        0x0000000105d85616 chromedriver + 321046
+          # 8   chromedriver                        0x0000000105d86587 chromedriver + 324999
+          # 9   chromedriver                        0x0000000105f707f9 chromedriver + 2332665
+          # 10  chromedriver                        0x0000000105f7d963 chromedriver + 2386275
+          # 11  chromedriver                        0x0000000105f7d45b chromedriver + 2384987
+          # 12  chromedriver                        0x0000000105f575b5 chromedriver + 2229685
+          # 13  chromedriver                        0x0000000105f7e3bf chromedriver + 2388927
+          # 14  chromedriver                        0x0000000105f65c79 chromedriver + 2288761
+          # 15  chromedriver                        0x0000000105f94f69 chromedriver + 2482025
+          # 16  chromedriver                        0x0000000105fa7103 chromedriver + 2556163
+          # 17  libsystem_pthread.dylib             0x00007fff58b622eb _pthread_body + 126
+          # 18  libsystem_pthread.dylib             0x00007fff58b65249 _pthread_start + 66
+          # 19  libsystem_pthread.dylib             0x00007fff58b6140d thread_start + 13
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:72:in `assert_ok'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:34:in `initialize'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `new'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `create_response'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/default.rb:114:in `request'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:64:in `call'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/bridge.rb:167:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:567:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:229:in `screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:56:in `screenshot_as'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:40:in `block in save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:40:in `open'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:40:in `save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/selenium/driver.rb:114:in `save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:724:in `block in save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:724:in `tap'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:724:in `save_screenshot'
+          # ./spec/spec_helper.rb:116:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/spec_helper.rb:127:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/support/retry_allure_helper.rb:27:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:37:in `block (2 levels) in setup'
+
+     3.3) Failure/Error: file_name = page.save_screenshot
+
+          Selenium::WebDriver::Error::NoSuchWindowError:
+            no such window: target window already closed
+            from unknown error: web view not found
+              (Session info: chrome=89.0.4389.90)
+          # 0   chromedriver                        0x0000000105fa1909 chromedriver + 2533641
+          # 1   chromedriver                        0x000000010662bd53 chromedriver + 9391443
+          # 2   chromedriver                        0x0000000105d5f3c3 chromedriver + 164803
+          # 3   chromedriver                        0x0000000105d4411f chromedriver + 53535
+          # 4   chromedriver                        0x0000000105dad489 chromedriver + 484489
+          # 5   chromedriver                        0x0000000105db96a2 chromedriver + 534178
+          # 6   chromedriver                        0x0000000105dab043 chromedriver + 475203
+          # 7   chromedriver                        0x0000000105d85616 chromedriver + 321046
+          # 8   chromedriver                        0x0000000105d86587 chromedriver + 324999
+          # 9   chromedriver                        0x0000000105f707f9 chromedriver + 2332665
+          # 10  chromedriver                        0x0000000105f7d963 chromedriver + 2386275
+          # 11  chromedriver                        0x0000000105f7d45b chromedriver + 2384987
+          # 12  chromedriver                        0x0000000105f575b5 chromedriver + 2229685
+          # 13  chromedriver                        0x0000000105f7e3bf chromedriver + 2388927
+          # 14  chromedriver                        0x0000000105f65c79 chromedriver + 2288761
+          # 15  chromedriver                        0x0000000105f94f69 chromedriver + 2482025
+          # 16  chromedriver                        0x0000000105fa7103 chromedriver + 2556163
+          # 17  libsystem_pthread.dylib             0x00007fff58b622eb _pthread_body + 126
+          # 18  libsystem_pthread.dylib             0x00007fff58b65249 _pthread_start + 66
+          # 19  libsystem_pthread.dylib             0x00007fff58b6140d thread_start + 13
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:72:in `assert_ok'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:34:in `initialize'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `new'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `create_response'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/default.rb:114:in `request'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:64:in `call'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/bridge.rb:167:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:567:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:229:in `screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:56:in `screenshot_as'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:40:in `block in save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:40:in `open'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb:40:in `save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/selenium/driver.rb:114:in `save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:724:in `block in save_screenshot'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:724:in `tap'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:724:in `save_screenshot'
+          # ./spec/support/retry_allure_helper.rb:34:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/spec_helper.rb:127:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/support/retry_allure_helper.rb:27:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:37:in `block (2 levels) in setup'
+
+     3.4) Failure/Error: ex.run_with_retry retry: (ENV['RETRY_COUNT'] || 1).to_i # 2 means actually 1 retry
+
+          Selenium::WebDriver::Error::InvalidArgumentError:
+            invalid argument: 'handle' must be a string
+              (Session info: chrome=89.0.4389.90)
+          # 0   chromedriver                        0x0000000105fa1909 chromedriver + 2533641
+          # 1   chromedriver                        0x000000010662bd53 chromedriver + 9391443
+          # 2   chromedriver                        0x0000000105d5f3c3 chromedriver + 164803
+          # 3   chromedriver                        0x0000000105db1a7a chromedriver + 502394
+          # 4   chromedriver                        0x0000000105daacd8 chromedriver + 474328
+          # 5   chromedriver                        0x0000000105d85616 chromedriver + 321046
+          # 6   chromedriver                        0x0000000105d86587 chromedriver + 324999
+          # 7   chromedriver                        0x0000000105f707f9 chromedriver + 2332665
+          # 8   chromedriver                        0x0000000105f7d963 chromedriver + 2386275
+          # 9   chromedriver                        0x0000000105f7d45b chromedriver + 2384987
+          # 10  chromedriver                        0x0000000105f575b5 chromedriver + 2229685
+          # 11  chromedriver                        0x0000000105f7e3bf chromedriver + 2388927
+          # 12  chromedriver                        0x0000000105f65c79 chromedriver + 2288761
+          # 13  chromedriver                        0x0000000105f94f69 chromedriver + 2482025
+          # 14  chromedriver                        0x0000000105fa7103 chromedriver + 2556163
+          # 15  libsystem_pthread.dylib             0x00007fff58b622eb _pthread_body + 126
+          # 16  libsystem_pthread.dylib             0x00007fff58b65249 _pthread_start + 66
+          # 17  libsystem_pthread.dylib             0x00007fff58b6140d thread_start + 13
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:72:in `assert_ok'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:34:in `initialize'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `new'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `create_response'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/default.rb:114:in `request'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:64:in `call'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/bridge.rb:167:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:567:in `execute'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:136:in `switch_to_window'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/target_locator.rb:80:in `window'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/selenium/driver.rb:217:in `switch_to_window'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/selenium/driver_specializations/chrome_driver.rb:42:in `reset!'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/session.rb:128:in `reset!'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara.rb:322:in `block in reset_sessions!'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara.rb:322:in `reverse_each'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara.rb:322:in `reset_sessions!'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/capybara-3.29.0/lib/capybara/rspec.rb:18:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/spec_helper.rb:127:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # ./spec/support/retry_allure_helper.rb:27:in `block (2 levels) in <top (required)>'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry'
+          # /Users/cansuabes/.rvm/gems/ruby-2.6.3/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:37:in `block (2 levels) in setup'
+
+Finished in 26 minutes 1 second (files took 1.83 seconds to load)
+3 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/features/desktop/insurance/home/desktop_get_quote_spec.rb:16 # Home Insurance Get Quote Test Suite Verify user can get home insurance with registered email address
+rspec ./spec/features/desktop/insurance/home/desktop_get_quote_spec.rb:23 # Home Insurance Get Quote Test Suite Verify user can get home insurance with non-registered email address
+rspec ./spec/features/desktop/insurance/home/desktop_get_quote_spec.rb:32 # Home Insurance Get Quote Test Suite Verify home insurance breadcrumbs are working as expected
+
+
+3 examples, 3 failures
+
+Took 1563 seconds (26:03)
