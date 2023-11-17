@@ -1,12 +1,15 @@
-NAME: 'Anu User'
+
+#Regression Test Data
+
+NAME: 'Automation Regression User'
 SURNAME: 'Yalla'
-VALID_EMAIL: 'auto@test.com'
+VALID_EMAIL: 'auto_regression001@test.com'
 INVALID_EMAIL: 'invalid_email@xxxx'
 NONE_REGISTERED_EMAIL: 'none_registered@gmail.com'
 VALID_PASSWORD: '111111'
 INVALID_PASSWORD: 'xxxxxxx'
 CARD_NUMBER: '4005 5500 0000 0001'
-EXPIRY_DATE: '0423'
+EXPIRY_DATE: '0425'
 CVV: '123'
 CARD_HOLDER: 'TEST'
 PET_NAME: 'AUTO PET'
@@ -15,36 +18,110 @@ PHONE_NUMBER: '5972573'
 PET_EMAIL: 'anu.peter@yallacompare.com'
 
 
-YEAR: '2021'
+YEAR: '2020'
 
-MAKE : 'Toyota'
-MODELMASTER :  'Fortuner '
-MODEL :  '3.0 D'
+
 CARCONDITION :  'Good'
-CITY: 'Abu Dhabi'
-FIRSTCAR : 'True'
+
+FIRSTCAR : 'False'
 NONGCC : 'False'
 THIRDPARTY : 'False'
-OLDAGENCY : 'False'
-NATIONALITY : 'Indian'
-FIRSTLICENSECOUNTRY : 'United Arab Emirates'
+OLDAGENCY : 'True'
+FIRSTLICENSECOUNTRY : 'India'
 INTEXP : '2 to 3 Years'
-LOCALEXP : '3 to 4 Years'
+LOCALEXP : '4 to 5 Years'
 LASTCLAIM : 'Never'
 NOCLAIMYEARS : 'Yes - 3 years proof'
 COVERPREFERENCE: 'Fully Comprehensive'
-DOBDAY : '4'
-DOBMONTH : '3'
-DOBYEAR : '1988'
+
+
+PA_MAX_DOBYEAR : '1957'
+OLD_PA_EMAIL: 'watania_api001@test.com'
+RENEWAL_EMAIL : 'autoPA_0702@test.com'
+RENEWAL_MOBILE  : '509007009'
 
 MAX_DOBYEAR : '1956'
 CLAIM_CASE: '0-12 Months Ago'
 EDIT_YEAR: '2021'
 MIN_LOCALEXP: '6 to 12 Months'
 
+##########TRAVEL#########
+SCHENGEN_PRODUCT: ['Program 1 - Individual Worldwide Excluding USA & Canada without Covid','Program 2 - Individual Worldwide Excluding USA & Canada without Covid','Program 1 - Individual Worldwide Excluding USA & Canada with Covid','Program 2 - Individual Worldwide Excluding USA & Canada with Covid']
+US_CANADA_PRODUCT: ['Program 1 - Individual Worldwide without Covid','Program 2 - Individual Worldwide without Covid','Program 1 - Individual Worldwide with Covid','Program 2 - Individual Worldwide with Covid']
+HAJJ_PRODUCT: ['Program A - Hajj Umrah Basic - Individual','Program A - Hajj Umrah Plus - Individual','Program A - Hajj Umrah Premier - Individual','Program B - Hajj Umrah Basic','Program B - Hajj Umrah Plus','Program B - Hajj Umrah Extra']
+
+
+####CAR RATING#########
+PROVIDER: 'Oriental Insurance Company'
+Last_Claim: ['13-24 Months Ago']
+Claim_Proof: ['Yes - 2 years proof','Yes - 4 or more years proof']
+
+MAKE : 'Nissan'
+MODELMASTER :  'Patrol Safari '
+MODEL :  '4.8L A/T'
+
+MAKE_SALOON: ['Nissan','Ford','Ford','Mazda','Mazda','Renault','Renault']
+Model_SALOON: ['Kicks','Figo','EcoSport','3','CX-5 ','Fluence ','Duster']
+Trim_SALOON: ['1.6 SL','1.6L Trend','1.5 Trend','1.6 S','2WD 2.0-litre ','1.6L PE','2.0L SE']
+
+MAKE_SALOON_RATE: ['Mitsubishi','Mitsubishi','Mitsubishi','Hyundai','Hyundai','Honda','Honda','Toyota','Toyota','Toyota','Kia','Kia','Nissan','Nissan','Ford','Ford','Mazda','Mazda','Renault','Renault']
+Model_SALOON_RATE: ['Attrage','Outlander','Pajero','Accent','Tucson','City','CRV','Corolla ','Fortuner ','FJ Cruiser','Stinger','Sorento ','Sunny','Kicks','Figo ','EcoSport','3','CX-5 ','Fluence ','Duster']
+Trim_SALOON_RATE: ['1.2 GLX','2.4 GLX','3.2 GLS','1.4L GL','2.7 V6','1.5L DX','2.4 LX','1.6 S','3.0 D','4.0L GXR','2.0TC RWD','2.4L Base','1.5 SL','1.6 SL','1.6L Trend','1.5 Trend','1.6 S','2WD 2.0-litre ','1.6L PE','2.0L SE']
+
+
+NATIONALITY : 'Indian'
+DNIRC_NATIONALITY: ['Indian','Pakistani','Iranian']
+DOBDAY : '9'
+DOBMONTH : '2'
+DOBYEAR : '1988'
+CITY: 'Abu Dhabi'
+SUM_INSURED: '150000'
+
+tpl_SALOON: ['840','840','840']
+
+minimum_premium_claim: ['850','850','1270',
+                        '850','850',
+                        '850','850',
+                        '850','850','1270',
+                        '850','1045',
+                        '850','1045',
+                        '850','850',
+                        '850','850',
+                        '850','850']
+  #Saloon['1370','1370','1370']
+#4WD['2070','2070','2070']
+#2WD['1370','1570','1570']
+#Patrol['2070','2070','2070']
+
+#saloon
+minimum_premium_noClaim: ['2070','2070','2070']
+  #Saloon['1170','1220','1320']
+#4WD['1270','1470','1670']
+#2WD['1170','1320','1570']
+ #Patrol ['2070','2070','2070']
+
+#saloon
+agency_minimum_premium: ['3110','3110','3110']
+  #Saloon['2410','2610','2860']
+#4WD['2210','2410','2610']
+  #2WD['2410','2610','2860']
+ # Patrol ['3110','3110','3110']
+#saloon 100k+['2310','2510','2760']
+#4WD 100k+['2310','2610','2860']
+#2Wd 100K+ ['2310','2510','2760']
+
+#rates
+
+RATE_CLAIM: ['0.0180']
+RATE_NOCLAIM: ['0.0180']
+RATE_AGENCY: ['0.0315']
+oriental_rate: '0.014'
+
+
 UAE:
   COUNTRY_CODE: '+971'
-  VALID_PHONE_NUMBER: '509000438'
+  VALID_PHONE_NUMBER: '508457457'
+  TRAVEL_PHONE_NUMBER: '5509000438'
   INVALID_PHONE_NUMBER: '55xxx'
 
 QAT:

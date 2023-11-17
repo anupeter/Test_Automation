@@ -12,7 +12,7 @@ task :clean do
 end
 
 # to run tests in local remote should be set to off, otherwise should be on
-task :website_exec, [:country, :project, :environment, :staging_env, :app, :core, :browser, :language, :remote] do |_task, args|
+task :website_exec, [:country, :project, :environment, :staging_env, :broker_env, :app, :core, :browser, :language, :remote] do |_task, args|
   country = args.country.upcase
   project = args.project.upcase
   environment = args.environment.upcase
@@ -22,6 +22,8 @@ task :website_exec, [:country, :project, :environment, :staging_env, :app, :core
   core = args.core
   remote = args.remote.upcase
   staging_env = args.staging_env.upcase
+  broker_env = args.broker_env.upcase
+
   ENV['COUNTRY'] = country
   ENV['REMOTE'] = remote
   ENV['ENVIRONMENT'] = environment
@@ -31,7 +33,9 @@ task :website_exec, [:country, :project, :environment, :staging_env, :app, :core
   ENV['ALLURE_RUN'] = 'YES'
   ENV['BROWSER'] = browser
   ENV['STAGING_ENV'] = staging_env
+  ENV['BROKER_ENV'] = broker_env
   ENV['FEATURE_IDENTIFIER'] = country # For Allure to identify each run as separate based on given parameter
+
   rm_rf "screenshots"
   rm_rf "allure-results"
   mkdir_p(["./tmp/#{country}"], verbose: false)
@@ -112,3 +116,56 @@ task :gather_statistics, [:project, :environment, :report_url] do |_task, args|
     f.write(mini_report)
   end
 end
+
+###################################Regression Task
+
+task :website_regression, [:country, :project, :environment, :staging_env, :broker_env, :app, :core, :browser, :language, :remote, :type] do |_task, args|
+  country = args.country.upcase
+  project = args.project.upcase
+  environment = args.environment.upcase
+  browser = args.browser.upcase
+  language = args.language.upcase || 'EN'
+  app = args.app.upcase
+  core = args.core
+  remote = args.remote.upcase
+  staging_env = args.staging_env.upcase
+  broker_env = args.broker_env.upcase
+  type = args.type.upcase
+  ENV['COUNTRY'] = country
+  ENV['REMOTE'] = remote
+  ENV['ENVIRONMENT'] = environment
+  ENV['APP'] = app
+  ENV['LANG'] = language
+  ENV['RETRY_COUNT'] = 2.to_s # actually means 1 retry
+  ENV['ALLURE_RUN'] = 'YES'
+  ENV['BROWSER'] = browser
+  ENV['STAGING_ENV'] = staging_env
+  ENV['BROKER_ENV'] = broker_env
+  ENV['FEATURE_IDENTIFIER'] = type # For Allure to identify each run as separate based on given parameter
+  ENV['TYPE'] = type
+  rm_rf "screenshots"
+  rm_rf "allure-results"
+  mkdir_p(["./tmp/#{country}"], verbose: false)
+
+  puts ("<< Country: #{country}, Project: #{project}, Environment: #{environment}, Staging Environment: #{staging_env}, Broker Environment: #{broker_env},App: #{app} , Core: #{core}, Browser: #{browser} >>, Remote: #{remote}")
+  system "parallel_rspec spec/features/#{ENV['APP'].downcase}/" +
+             " --runtime-log tmp/#{country}/parallel_runtime_rspec.log" +
+             " -o '--tag ~skip_#{type.downcase} --tag #{type.downcase}" +
+             " --format progress --format ParallelTests::RSpec::RuntimeLogger --out tmp/parallel_runtime_rspec.log" +
+             " -f json -o tmp/#{country}/run$TEST_ENV_NUMBER.json'" +
+             " -n #{args.core} > ./tmp/#{country}/process.log"
+
+  if Dir.exist?('allure-results')
+    environment_stats = "Platform=#{app}\n"
+    "Environment=#{environment}\n" +
+        "Browser=#{browser}\n" +
+        "Parallel.Core=#{args.core}\n" +
+        "Language=#{language}\n"
+
+    File.open('allure-results/environment.properties', 'w') do |f|
+      f.write(environment_stats)
+    end
+  end
+end
+
+

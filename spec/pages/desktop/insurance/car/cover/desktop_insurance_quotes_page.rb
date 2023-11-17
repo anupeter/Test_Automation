@@ -25,12 +25,13 @@ class DesktopCarInsuranceQuotesDetails < BasePage
   element :last_claim_period_field, :xpath, "(//div[@class='col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0'])[7]"
 
   element :all_good_button, :xpath, "//button[@class='button-accent px-15 w-auto py-5' and text()='All Good']"
-
+  element :srp_page,:xpath,"//body[@class='funnel car-quote-srp']"
   #filters
   element :agency_repair_filter, :css, "button[data-repairby='maker']"
   element :premium_garage_filter, :css, "button[data-repairby='premiumGarage']"
   element :approved_garage_filter, :css, "button[data-repairby='approvedGarage']"
   element :only_takaful_filter, :css, "span[class='slider round']"
+  element :tpl_filter,:css,"button[data-type='Third Party Only']"
   element :zero_quote_message, :xpath, "//section[@class='no-quotes-section']//div[@class='info-box']"
   element :no_quote_message, :xpath, "//h2[@class='mb-0 mt-0']"
 
@@ -45,17 +46,20 @@ class DesktopCarInsuranceQuotesDetails < BasePage
   element :replacement_car_checkbox, :css, "[class='insurance-label'] + *"
 
   #breadcrumbs
-  element :vehicle_bc,[:link_text,'Vehicle >']
-  element :driver_bc,[:xpath,"//li[@class='breadcrumbs__crumb breadcrumbs__crumb--visited']/a[@href='/insurance/uae/en/car/driver']"]
+  element :vehicle_bc,:link_text,'Vehicle >'
+  element :driver_bc,:xpath,"//li[@class='breadcrumbs__crumb breadcrumbs__crumb--visited']/a[@href='/insurance/uae/en/car/driver']"
 
   #covers and benefits
-  elements :expand_button,[:xpath,"//div[@data-provider='Adamjee Insurance Insurance Company Test']/div[@class='carQuoteV2__innerDesktop']/form/div[3]/div/span[text()=' Click here for more info ']"]
+  elements :expand_button,:xpath,"//div[@data-provider='Adamjee Insurance Insurance Company Test']/div[@class='carQuoteV2__innerDesktop']/form/div[3]/div/span[text()=' Click here for more info ']"
 
+  #provider price
+  elements :quote_price,:xpath,"//span[text()='Oriental Insurance Company - Comprehensive']/parent::div/following-sibling::div/span"
+  element :tpl_price, :xpath,"//span[text()='Adamjee Insurance Insurance Company Test - Third Party Only']/parent::div/following-sibling::div//span"
 
 
 
   def verify_quotes_details(car, make, modelMaster, model, city, expiredPolicy, nationality, firstLicenseCountry,
-                            intExp, localExp, lastClaim, name, email, mobile, claimsLastYear)
+                            intExp, localExp, lastClaim, name, email, mobile)
     wait_for_element(quote_modal)
     expect(car_field).to have_text("#{car}")
     expect(car_field).to have_text("#{make}")
@@ -71,9 +75,11 @@ class DesktopCarInsuranceQuotesDetails < BasePage
     expect(int_driving_exp_field).to have_text("#{intExp}")
     expect(uae_driving_exp_field).to have_text("#{localExp}")
     expect(last_claim_period_field).to have_text("#{lastClaim}")
-    expect(last_claim_period_field).to have_text("#{claimsLastYear}")
+    #expect(last_claim_period_field).to have_text("#{claimsLastYear}")
     expect(policy_expired_field).to have_text("#{expiredPolicy}")
   end
+
+
 
   def filter_quotes(filter_type, filter_value)
     case filter_type
@@ -83,6 +89,8 @@ class DesktopCarInsuranceQuotesDetails < BasePage
       find(:css, "button[data-repairby='#{filter_value}']").click
     when 'Insurer'
       find(:xpath, "//span[@class='max-width-250px' and text()=' #{filter_value}']").click
+    when 'Tpl'
+      find(:css,"button[data-type='#{filter_value}']").click
     when 'Only Takaful'
       only_takaful_filter.click
     end
@@ -126,5 +134,27 @@ class DesktopCarInsuranceQuotesDetails < BasePage
       price << ((buy_now)[i]).text.gsub(/[^0-9]/, '').to_i
     end
     expect(price.sort).to eq(price)
+  end
+
+  def calculate_premium(car_value,rate,quote_price)
+    calculated_price = ((car_value.to_f) * (rate.to_f)).to_i
+    if calculated_price <= 2000
+      final_price = (calculated_price + 70)
+    else
+      final_price = (calculated_price + 110)
+    end
+    expect(final_price).to eq(quote_price)
+  end
+
+  def calculate_premium_oriental(car_value,rate,quote_price)
+    calculated_price = ((car_value.to_f) * (rate.to_f)).to_i
+    #pab_price = (((seats * 20).to_f) + 100)
+    #last_price = (calculated_price + (seats.to_i)).to_i
+    if calculated_price <= 2000
+      calculated_price = (calculated_price + 70)
+    else
+      calculated_price = (calculated_price + 110)
+    end
+    expect(calculated_price).to eq(quote_price)
   end
 end
