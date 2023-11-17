@@ -9,6 +9,8 @@ require 'rspec'
 require 'rspec/expectations'
 require 'rspec/retry'
 require 'selenium-webdriver'
+
+
 require File.dirname(__FILE__) + '//support/retry_allure_helper'
 
 RSpec.configure do |config|
@@ -75,12 +77,20 @@ RSpec.configure do |config|
   def set_host (host)
     case host
     when 'broker'
-      Capybara.app_host = "https://cms.ci4.me/"
+      if ENV['BROKER_ENV'] == 'BROKER1'
+      Capybara.app_host = "https://broker.testingyalla.xyz/"
+      elsif ENV['BROKER_ENV'] == 'BROKER2'
+        Capybara.app_host = "https://broker-2.testingyalla.xyz/"
+      else
+        Capybara.app_host = "https://broker.testingyalla.xyz/"
+        end
     when 'cover'
       if ENV['STAGING_ENV'] == 'ORG'
         Capybara.app_host = "https://staging:Stage9870@testingyalla.xyz"
       elsif ENV['STAGING_ENV'] == 'COVER1'
         Capybara.app_host = "https://staging:Stage9870@stage-cover-1.testingyalla.xyz"
+      elsif ENV['STAGING_ENV'] == 'COVER2'
+        Capybara.app_host = "https://staging:Stage9870@stage-cover-2.testingyalla.xyz"
       else
         Capybara.app_host = "https://staging:Stage9870@testingyalla.xyz"
       end

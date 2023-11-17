@@ -36,10 +36,10 @@ feature 'Car Insurance Get Quote Test Suite', :skip_qat, :uae do
 
       sleep 2 #TODO: find a workaround to remove sleep
       @app.desktop_car_insurance_quotes_details.filter_quotes("Repair By", "maker")
-      page.scroll_to(find(:xpath, "//span[@class='max-width-250px' and text()=' NoorTakaful']"))
-      @app.desktop_car_insurance_quotes_details.filter_quotes("Insurer", "NoorTakaful")
+      page.scroll_to(find(:xpath, "//span[@class='max-width-250px' and text()=' Product_Eligibility_Cases']"))
+      @app.desktop_car_insurance_quotes_details.filter_quotes("Insurer", "Product_Eligibility_Cases")
       sleep 2 #TODO: find a workaround to remove sleep
-      @app.desktop_car_insurance_quotes_details.verify_filter_applied("Insurer", "NoorTakaful")
+      @app.desktop_car_insurance_quotes_details.verify_filter_applied("Insurer", "Product_Eligibility_Cases")
       sleep 2 #TODO: find a workaround to remove sleep
       @app.desktop_car_insurance_quotes_details.verify_filter_applied("Repair By", "maker")
 
@@ -72,8 +72,8 @@ feature 'Car Insurance Get Quote Test Suite', :skip_qat, :uae do
 
       sleep 2 #TODO: find a workaround to remove sleep
       @app.desktop_car_insurance_quotes_details.filter_quotes("Repair By", "maker")
-      page.scroll_to(find(:xpath, "//span[@class='max-width-250px' and text()=' NoorTakaful']"))
-      @app.desktop_car_insurance_quotes_details.filter_quotes("Insurer", "NoorTakaful")
+      page.scroll_to(find(:xpath, "//span[@class='max-width-250px' and text()=' Product_Eligibility_Cases']"))
+      @app.desktop_car_insurance_quotes_details.filter_quotes("Insurer", "Product_Eligibility_Cases")
       expect(@app.desktop_car_insurance_quotes_details.no_quote_message).to have_text("No quote available for activated filters, ", wait: 30)
       page.find(:xpath,"//span[@class='text-accent font-weight-bold pointer' and text()='Clear filters']").click
 

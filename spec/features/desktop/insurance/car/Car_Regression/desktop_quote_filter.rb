@@ -17,30 +17,28 @@ feature 'Car Insurance Filter Quotes Test Suite', :uae, :skip_egy do
     nonGcc ='False'
     thirdParty = 'False'
     oldAgency = 'False'
-    expiredPolicy = 'False'
     nationality = 'Turkish'
     firstLicenseCountry = 'United Arab Emirates'
     intExp = '2 to 3 Years'
-    localExp = '1 to 2 Years'
-    lastClaim ='0-12 Months Ago'
-    coverPrefence = 'Not Sure'
-    claimsLastYear = '2'
+    localExp = '3 to 4 Years'
+    lastClaim ='Never'
+    coverPrefence = 'Fully Comprehensive'
+    dobDay = '4'
+    dobMonth = '3'
+    dobYear = '1989'
+
     @app.desktop_car_insurance_vehicle_details.choose_vehicle_details("#{car}", "#{make}", "#{modelMaster}", "#{model}",
                                                                       "#{city}", "#{firstCar}", "#{nonGcc}", "#{thirdParty}",
-                                                                      "#{oldAgency}", "#{expiredPolicy}", "#{carCondition}")
+                                                                      "#{oldAgency}","#{carCondition}")
     @app.desktop_car_insurance_vehicle_details.continue_button.click
     @app.desktop_car_insurance_driver_details.choose_driver_details("#{nationality}", "#{firstLicenseCountry}", "#{intExp}",
                                                                     "#{localExp}", "#{lastClaim}", "#{coverPrefence}",
-                                                                    "#{@name}", "#{@email}",
-                                                                    "#{@mobile}",
-                                                                    "#{claimsLastYear}")
+                                                                    "#{dobDay}","#{dobMonth}","#{dobYear}",
+                                                                    "#{@name}", "#{@email}", "#{@mobile}")
     @app.desktop_car_insurance_driver_details.get_quotes_button.click
-    @app.desktop_car_insurance_quotes_details.verify_quotes_details("#{car}","#{make}", "#{modelMaster}", "#{model}",
-                                                                    "#{city}", "No", "Turkey",
-                                                                    "#{firstLicenseCountry}", "#{intExp}", "#{localExp}",
-                                                                    "#{lastClaim}", "#{@name}",
-                                                                    "#{@email}", "#{@mobile}", "#{claimsLastYear}" )
-    $quote_id = current_url.gsub('https://stage-cover-1.testingyalla.xyz/insurance/uae/en/car/quotes/','')
+    @app.desktop_pre_quotes_page.trim_selection_dropdown
+    sleep 30
+      #$quote_id = current_url.gsub('https://stage-cover-1.testingyalla.xyz/insurance/uae/en/car/quotes/','')
   end
 
   scenario 'Verify user can filter car insurance quotes according to policy features- fully comprehensive' do

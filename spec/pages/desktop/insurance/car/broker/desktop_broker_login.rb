@@ -10,9 +10,17 @@ class DesktopBrokerLogin < BasePage
   element :password_field, :css, "[name='password']"
   element :login_button, :css, "[type='submit']"
 
+  element :product_dropdown, :xpath, "//select[@id='insurance']"
+
+
   def login(name, password)
     username_field.send_keys(name)
     password_field.send_keys(password)
     login_button.click
+  end
+
+  def select_product(product)
+    product_dropdown.click
+    click_on(find(:xpath,"//select[@id='insurance']/option[@value='#{product}']"),false)
   end
 end

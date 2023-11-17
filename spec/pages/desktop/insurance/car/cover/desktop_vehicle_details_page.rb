@@ -37,7 +37,7 @@ class DesktopCarInsuranceVehicleDetails < BasePage
     end
 
     def fill_editbox
-      info = {"insuredValue" => "85000"} if ENV['COUNTRY'].downcase == 'uae'
+      info = {"insuredValue" => "#{$test_data['SUM_INSURED']}"} if ENV['COUNTRY'].downcase == 'uae'
       info = {"insuredValue" => "85000", "mileage" => "40000"} if ENV['COUNTRY'].downcase == 'egy'
       info.each_with_object([]) do |(key, value)|
         field = find(:css, "input[id='#{key}']")

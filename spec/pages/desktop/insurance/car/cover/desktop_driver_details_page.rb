@@ -18,11 +18,10 @@ class DesktopCarInsuranceDriverDetails < BasePage
       sleep 1
       click_on(find(:css, "span[id='select2-#{key}-container']"), false)
       sleep 1
-      click_on(find(:xpath, "//ul[@id='select2-#{key}-results']/li[text()='#{value}']"), false)
+      click_on(find(:xpath, "//li[text()='#{value}']"), false)
 
     end
-    date = {"policyStartDate_day" => "29", "policyStartDate_month" => "1", "policyStartDate_year" => "2023",
-            "dob_day" => "#{dobDay}", "dob_month" => "#{dobMonth}", "dob_year" => "#{dobYear}"}
+    date = {"dob_day" => "#{dobDay}", "dob_month" => "#{dobMonth}", "dob_year" => "#{dobYear}"}
     date.each_with_object([]) do |(key, value)|
       click_on(find(:css, "select[name='#{key}']"), false)
       click_on(find(:xpath, "//select[@name='#{key}']//option[@value='#{value}']"),false)
@@ -61,8 +60,7 @@ class DesktopCarInsuranceDriverDetails < BasePage
       click_on(find(:xpath, "//ul[@id='select2-#{key}-results']/li[text()='#{value}']"), false)
 
     end
-    date = {"policyStartDate_day" => "29", "policyStartDate_month" => "1", "policyStartDate_year" => "2023",
-            "dob_day" => "#{dobDay}", "dob_month" => "#{dobMonth}", "dob_year" => "#{dobYear}"}
+    date = {"dob_day" => "#{dobDay}", "dob_month" => "#{dobMonth}", "dob_year" => "#{dobYear}"}
     date.each_with_object([]) do |(key, value)|
       click_on(find(:css, "select[name='#{key}']"), false)
       click_on(find(:xpath, "//select[@name='#{key}']//option[@value='#{value}']"),false)

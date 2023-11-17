@@ -187,6 +187,11 @@ class App
     @pages[:mobile_broker_car_insurance_policy_details] ||=MobileBrokerCarInsurancePolicyDetails.new
   end
 
+  def broker_pa_insurance_policy_details
+    @pages[:broker_pa_insurance_policy_details] ||=BrokerPAInsurancePolicyDetails.new
+  end
+
+
   def broker_health_insurance_policy_details
     @pages[:broker_health_insurance_policy_details] ||= BrokerHealthInsurancePolicyDetails.new
   end
@@ -201,6 +206,54 @@ class App
 
   def broker_travel_insurance_policy_details
     @pages[:broker_travel_insurance_policy_details] ||=BrokerTravelInsurancePolicyDetails.new
+  end
+
+  def desktop_fz_login
+    @pages[:desktop_fz_login] ||= DesktopFzLogin.new
+  end
+
+  def desktop_fz_employee
+    @pages[:desktop_fz_employee] ||= DesktopFzEmployee.new
+  end
+
+  def desktop_fz_choose_plan
+    @pages[:desktop_fz_choose_plan]||= DesktopFzChoosePlan.new
+  end
+
+  def desktop_fz_send_declaration
+    @pages[:desktop_fz_send_declaration] ||= DesktopFzSendDeclaration.new
+  end
+
+  def desktop_fz_yop_mail
+    @pages[:desktop_fz_yop_mail] ||= DesktopFzYopMail.new
+  end
+
+  def desktop_fz_declaration
+    @pages[:desktop_fz_declaration] ||= DesktopFzDeclaration.new
+  end
+
+  def desktop_fz_quotes
+    @pages[:desktop_fz_quotes] ||= DesktopFzQuotes.new
+  end
+
+  def desktop_fz_checkout
+    @pages[:desktop_fz_checkout] ||= DesktopFzCheckout.new
+  end
+
+  def desktop_fz_payment
+    @pages[:desktop_fz_payment] ||= DesktopFzPayment.new
+  end
+
+  def desktop_fz_employees_list
+    @pages[:desktop_fz_employees_list] ||= DesktopFzEmployeesList.new
+  end
+
+  def desktop_fz_choosemember
+    @pages[:desktop_fz_choosemember] ||= DesktopFZChooseMember.new
+  end
+
+  def desktop_fz_complete_info
+    @pages[:desktop_fz_complete_info] ||= DesktopFZCompleteInfo.new
   end
 
   ##MOBILE##

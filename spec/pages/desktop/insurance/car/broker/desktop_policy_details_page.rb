@@ -11,7 +11,8 @@ class BrokerCarInsurancePolicyDetails < BasePage
   element :policy_status, :xpath, "//*[contains(text(),'Policy Status:')]/span"
   element :remarks_text, :xpath, "(//tr[@id='row--remarks']/td[@colspan='4']/span[@class='detail-span']/textarea[@id='remarks'])[1]"
   element :yes_button, :xpath, "(//input[@value='Yes'])[1]"
-
+  element :actual_start_date,:xpath,"//td[contains(text(),'Tax Invoice Date')]/following-sibling::td"
+  element :merchant_ref,:xpath,"//strong[text()='Merchant Reference']/parent::td/following-sibling::td[2]/span"
   #issue policy form
   element :policy_no, :css, "[name='policyNo']"
   element :actual_policy_price, :css, "[name='policyActualPrice']"
@@ -25,14 +26,21 @@ class BrokerCarInsurancePolicyDetails < BasePage
   element :last_year_provider, :css, "[id='lastYearProvider']"
   element :last_year_provider_option, :css, "option[value='UIC']"
   element :policy_issued_by, :css, "[id='policyIssuanceOwner']"
-  element :policy_issued_option, :css, "option[value='YALLACOMPARE']"
+  element :policy_issued_option, :css, "option[value='GULF_RESOURCES']"
+  element :tax_premium_field,:css,"[id='taxInvoiceNumberForPremium']"
+  element :tax_commission_field,:css,"[id='taxInvoiceNumberForCommission']"
+  element :tax_date,:css,"[id='taxInvoiceDatePicker']"
+  element :tax_available_day,:xpath,"//td[@class='available active start-date end-date'][1]"
+  element :emirates_id_field,:css,"[id='emiratesIdNumber']"
   element :issued_button, :css, "[value='Issued']"
+
+
 
   def upload_a_file
     page.execute_script("document.getElementsByName('documentFile')[0].setAttribute('style', 'visible;');")
     page.execute_script("document.getElementsByName('documentFile')[0].style.opacity = 1")
     fields_array = {"Passport" => "pdf", "License" => "jpg", "Vehicle Registration" => "pdf", "ID Front" => "jpg",
-                    "Emirates ID Back" => "png", "OFFLINE_QUOTE" => "pdf"}
+                    "Emirates ID Back" => "png"}
     fields_array.each_with_object([]) do |(field, type)|
       document_dropdown.click
       find(:css, "select[id='document'] option[value='#{field}']").click
@@ -72,17 +80,29 @@ class BrokerCarInsurancePolicyDetails < BasePage
     expect(policy_status).to have_text(status, wait: 20)
   end
 
-  def issue_policy(policy_number, policy_price, insured_value, note, chassis_number)
+
+  def issue_policy(policy_number, policy_price, insured_value, note, chassis_number,tax_premium,tax_commission,emirates_id)
     click_on(issued_button, false)
     policy_no.send_keys(policy_number)
+    actual_policy_price.native.clear
     actual_policy_price.send_keys(policy_price)
+    actual_insured_value.native.clear
     actual_insured_value.send_keys(insured_value)
     credit_note.send_keys(note)
     click_on(policy_start_date, false)
     click_on(first_available_day, false)
     click_on(policy_issued_by, false)
     click_on(policy_issued_option, false)
+    click_on(last_year_provider,false)
+    click_on(last_year_provider_option,false)
     chassis_no.send_keys(chassis_number)
+    tax_premium_field.send_keys(tax_premium)
+    tax_commission_field.send_keys(tax_commission)
+    click_on(tax_date,false)
+    click_on(tax_available_day,false)
+    emirates_id_field.send_keys(emirates_id)
     click_on(yes_button, false)
   end
+
+
 end

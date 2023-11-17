@@ -4,4 +4,4 @@ You are allowed to:
 1. Remove rake task
 2. Add existing rake tasks
 To add existing rake tasks automatically delete this file and reload the project.
---><RakeGroup description="" fullCmd="" taksId="rake"><RakeTask description="" fullCmd="clean" taksId="clean" /><RakeTask description="" fullCmd="gather_statistics" taksId="gather_statistics" /><RakeTask description="" fullCmd="website_exec" taksId="website_exec" /></RakeGroup></Settings>
+--><RakeGroup description="" fullCmd="" taksId="rake"><RakeTask description="" fullCmd="clean" taksId="clean" /><RakeTask description="" fullCmd="gather_statistics" taksId="gather_statistics" /><RakeTask description="" fullCmd="website_exec" taksId="website_exec" /><RakeTask description="" fullCmd="website_regression" taksId="website_regression" /></RakeGroup></Settings>

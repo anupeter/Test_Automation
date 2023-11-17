@@ -11,6 +11,9 @@ class DesktopCarInsuranceCheckout < BasePage
   element :total_price, :xpath, "//p[@class='price']"
   element :i_agree, :css, "[class='insurance-checkbox required-checkbox'] + *"
   element :proceed_to_payment, :css, "button[class='button-accent']"
+  element :pa_checkbox,:xpath,"//span[@class='insurance-label' and text()='First Month Free! ']"
+  element :pa_label,:xpath,"//i[@class='insurance-icon-help-circled clr-primary']/following-sibling::text()"
+
 
   def secure_checkout
     javascript_click(i_agree)
